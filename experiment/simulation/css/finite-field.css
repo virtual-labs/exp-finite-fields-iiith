@@ -1,0 +1,19 @@
+.input{
+    /* margin-top: -0.3%; */
+    height: 2.5 em;
+    width: 9em;
+    border: solid black;
+    border-radius: 0.5em;
+    background-color: #fff;
+    font-size: 1.25em;
+}
+
+#observations1,
+#observations2 {
+    font-size: 1.25em;
+}
+
+.scroll-box-1 {
+    overflow-y: auto;
+    height: 350px;
+}
