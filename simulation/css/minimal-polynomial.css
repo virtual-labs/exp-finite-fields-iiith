@@ -1,0 +1,75 @@
+/* For standard array */
+table {
+    width: 100%;
+}
+
+
+td {
+    text-align: left;
+    padding-top: 5px;
+    border-right: 2px solid gray;
+    font-size: 1.25em;
+}
+
+td.noBorder {
+    border: 0;
+}
+
+
+.scroll-box-1 {
+    overflow-x: scroll;
+}
+
+.scroll-box-2 {
+    overflow-x: scroll;
+    overflow-y: auto;
+    height: 360px;
+}
+
+#observations1,
+#observations2 {
+    font-size: 1.25em;
+    color: black;
+}
+
+.myButton {
+
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 7em;
+    height: 2.5em;
+    border-radius: 2em;
+
+}
+
+.myButton:disabled{
+    cursor: not-allowed
+}
+
+.myButton2 {
+
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 10em;
+    height: 2.5em;
+    border-radius: 2em;
+
+}
+
+.myButton2:disabled{
+    cursor: not-allowed
+}
