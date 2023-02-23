@@ -1,0 +1,40 @@
+/* For standard array */
+table {
+    width: 100%;
+}
+
+td,
+th {
+    border: 2px solid gray;
+    text-align: left;
+    padding-top: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.scroll-box-1 {
+    overflow-x: scroll;
+}
+
+.scroll-box-2 {
+    overflow-x: scroll;
+    overflow-y: auto;
+    height: 270px;
+}
+
+.input{
+    /* margin-top: -0.3%; */
+    height: 2.5em;
+    width: 6em;
+    border: solid black;
+    border-radius: 0.5em;
+    background-color: #fff;
+    font-size: 1.25em;
+}
+
+#observations1,
+#observations2 {
+    font-size: 1.25em;
+}
