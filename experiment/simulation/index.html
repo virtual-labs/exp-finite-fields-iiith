@@ -7,7 +7,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.css" />
 	<link rel="stylesheet" href="./css/euclidean-division.css">
 	<link rel="stylesheet" href="./css/main.css">
 
@@ -58,9 +57,11 @@
 							<b>Quick theory overview:</b>
 
 							<li>
-								For a non-linear block code, \(M\) is the total number of codewords and the rate is
-								R = \(\frac{log_2 M}{n}\).
-
+								The last non-zero remainder in the euclidean division algorithm gives the GCD.
+							</li>
+							<li>
+								The GCD h(x) can be expressed as the linear combination of f(x) and g(x) i.e.
+								h(x)=r(x)f(x)+s(x)g(x) where f(x) is the dividend and g(x) is the divisor.
 							</li>
 						</ul>
 
@@ -69,7 +70,38 @@
 						<ul style="list-style: disc;">
 							<b>Procedure:</b>
 							<li>
-								Enter the values in the fields and click on <b>Submit</b>.
+								Using landscape mode is recommended on mobile phones and other smaller screens.
+							</li>
+							<li>
+								Polynomials can be entered in the fields provided. Use only lower case x in the field.
+							</li>
+							<li>
+								Expressions like x<sup>2</sup> can be entered in the field by typing x^2 on the
+								keyboard.
+							</li>
+							<li>
+								1, x, +, x^2, x^3 and their combinations need to be entered in the fields in this task.
+								Do not enter any other symbols.
+							</li>
+							<li>
+								Enter the values in all the fields of a row and click on <b>Submit</b>.
+							</li>
+							<li>
+								The correctness of the entered answer is displayed in <b>Observations</b>.
+							</li>
+							<li>
+								If the answer is correct, proceed to the next row. Values in the fields
+								of a row cannot be entered without completing the previous row correctly.
+							</li>
+							<li>
+								Repeat this process until all the rows are filled and the algorithm is complete when a
+								success message displaying the GCD appears in <b>Observations</b>.
+							</li>
+							<li>
+								<b>Next</b> - Displays the next example.
+							</li>
+							<li>
+								<b>Previous</b> - Displays the previous example.
 							</li>
 
 
@@ -104,6 +136,7 @@
 				<div class="box-question">
 
 					<div class="scroll-box-1">
+						<p>
 						<table>
 
 							<tr>
@@ -111,49 +144,58 @@
 								<th>r(x)</th>
 								<th>s(x)</th>
 								<th>Quotient</th>
-
 							</tr>
-							<tr height="45px">
 
+							<tr height="45px">
 								<td> <b>x<sup>5</sup>+x<sup>2</sup>+x+1</b> </td>
 								<td> <b>1</b> </td>
 								<td> <b>0</b> </td>
 								<td> </td>
 							</tr>
-							<tr height="65px">
 
+							<tr height="65px">
 								<td><br> <b>x<sup>3</sup>+x<sup>2</sup>+x+1</b> </td>
 								<td><br> <b>0</b> </td>
 								<td><br> <b>1</b> </td>
-								<td> <span id="m-field-1" class="input"></span> &emsp;<button class="v-button" role="button"
-										id="submit1" onClick="confirm1()"> Submit </button>
-								</td>
+								<form action="" method="get" id="form1" autocomplete="off" onsubmit="return false">
 
+									<td>
+										<input id="m-field-1" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> &emsp;<button
+											class="v-button" role="button" id="submit1" form="form1"
+											onClick="confirm1()"> Submit
+										</button>
+									</td>
+								</form>
 							</tr>
+
 							<tr height="65px">
-
-								<td> <span id="m-field-2" class="input"></span> </td>
-								<td> <span id="m-field-3" class="input"></span> </td>
-								<td> <span id="m-field-4" class="input"></span> </td>
-								<td> <span id="m-field-5" class="input"></span> &emsp;<button class="v-button" role="button"
-										id="submit2" onClick="confirm2()" disabled> Submit </button>
-								</td>
-
-
+								<form action="" method="get" id="form2" autocomplete="off" onsubmit="return false">
+									<td> <input id="m-field-2" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="m-field-3" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="m-field-4" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td>
+										<input id="m-field-5" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled>
+										&emsp;<button class="v-button" role="button" id="submit2" form="form2"
+											onClick="confirm2()" disabled>
+											Submit </button>
+									</td>
+								</form>
 							</tr>
 
 							<tr height="40px">
-
 								<td> <b>0</b> </td>
 								<td> </td>
 								<td> </td>
 								<td> </td>
-
-
 							</tr>
 
 						</table>
-
+						</p>
 					</div>
 					<button class="v-button" role="button" onClick="page2()"> Next </button>
 				</div>
@@ -201,55 +243,66 @@
 								<th>Quotient</th>
 
 							</tr>
-							<tr height="45px">
 
+							<tr height="45px">
 								<td> <b>x<sup>6</sup>+x<sup>3</sup>+x<sup>2</sup>+1</b> </td>
 								<td> <b>1</b> </td>
 								<td> <b>0</b> </td>
 								<td> </td>
 							</tr>
-							<tr height="65px">
 
+							<tr height="65px">
 								<td><br> <b>x<sup>3</sup>+1</b> </td>
 								<td><br> <b>0</b> </td>
 								<td><br> <b>1</b> </td>
-								<td> <span id="math-field-1" class="input"></span> </td>
-
-								<td style="border:none"><button class="v-button" role="button" id="sub1"
-										onClick="check1()"> Submit </button> </td>
-
+								<form action="" method="get" id="form3" autocomplete="off" onsubmit="return false">
+									<td> <input id="math-field-1" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> &emsp; <button
+											class="v-button" role="button" id="sub1" form="form3" onClick="check1()">
+											Submit </button>
+									</td>
+								</form>
 							</tr>
+
 							<tr height="65px">
-
-								<td> <span id="math-field-2" class="input"></span> </td>
-								<td> <span id="math-field-3" class="input"></span> </td>
-								<td> <span id="math-field-4" class="input"></span> </td>
-								<td> <span id="math-field-5" class="input"></span> </td>
-
-								<td style="border:none; background-color: #ffff;"><button class="v-button" role="button"
-										id="sub2" onClick="check2()" disabled> Submit </button> </td>
-
-
+								<form action="" method="get" id="form4" autocomplete="off" onsubmit="return false">
+									<td> <input id="math-field-2" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="math-field-3" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="math-field-4" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="math-field-5" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> &emsp;
+										<button class="v-button" role="button" id="sub2" form="form4" onClick="check2()"
+											disabled> Submit
+										</button>
+									</td>
+								</form>
 							</tr>
+
 							<tr height="65px">
-
-								<td> <span id="math-field-6" class="input"></span> </td>
-								<td> <span id="math-field-7" class="input"></span> </td>
-								<td> <span id="math-field-8" class="input"></span> </td>
-								<td> <span id="math-field-9" class="input"></span> </td>
-
-								<td style="border:none"><button class="v-button" role="button" id="sub3"
-										onClick="check3()" disabled> Submit </button> </td>
-
+								<form action="" method="get" id="form5" autocomplete="off" onsubmit="return false">
+									<td> <input id="math-field-6" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="math-field-7" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="math-field-8" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="math-field-9" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> &emsp;
+										<button class="v-button" role="button" id="sub3" form="form5" onClick="check3()"
+											disabled> Submit
+										</button>
+									</td>
+								</form>
 							</tr>
+
 							<tr height="40px">
-
 								<td> <b>0</b> </td>
 								<td> </td>
 								<td> </td>
 								<td> </td>
-
-
 							</tr>
 						</table>
 
@@ -271,8 +324,6 @@
 		</div>
 	</section>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
 	<script src="./js/euclidean-division.js"></script>
 </body>

@@ -1,46 +1,41 @@
-var MQ = MathQuill.getInterface(2);
-
-// First Example
-var mFieldSpan1 = document.getElementById("m-field-1");
-var mField1 = MQ.MathField(mFieldSpan1, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan2 = document.getElementById("m-field-2");
-var mFieldSpan3 = document.getElementById("m-field-3");
-var mFieldSpan4 = document.getElementById("m-field-4");
-var mFieldSpan5 = document.getElementById("m-field-5");
+const mField1 = document.getElementById("m-field-1");
+const mField2 = document.getElementById("m-field-2");
+const mField3 = document.getElementById("m-field-3");
+const mField4 = document.getElementById("m-field-4");
+const mField5 = document.getElementById("m-field-5");
 
 function confirm1() {
 
     const obs1 = document.getElementById("observations1");
-    const inp1 = MQ(mFieldSpan1).latex();
+    const inp1 = mField1.value;
 
     if (inp1.length == 0) {
-        obs1.innerHTML = "<b>R2.</b> Enter the answer."
+        obs1.innerHTML = "Enter the answer."
         obs1.style.color = "black";
     }
 
     else if (inp1 == "x^2+x" || inp1 == "x+x^2") {
-        obs1.innerHTML = "<b>R2. Correct Answer!!!</b>";
+        obs1.innerHTML = "<b>Correct Answer!!!</b>";
         obs1.style.color = "green";
 
         document.getElementById("submit1").setAttribute("disabled", true);
         document.getElementById("submit2").removeAttribute("disabled");
 
-        MQ.MathField(mFieldSpan2, { spaceBehavesLikeTab: true, });
-        MQ.MathField(mFieldSpan3, { spaceBehavesLikeTab: true, });
-        MQ.MathField(mFieldSpan4, { spaceBehavesLikeTab: true, });
-        MQ.MathField(mFieldSpan5, { spaceBehavesLikeTab: true, });
-
+        mField1.setAttribute("disabled", true);
+        mField2.removeAttribute("disabled");
+        mField3.removeAttribute("disabled");
+        mField4.removeAttribute("disabled");
+        mField5.removeAttribute("disabled");
 
     }
 
     else {
         obs1.style.color = "red";
-        if (obs1.innerHTML == "<b>R2. Wrong Answer :(</b>") {
-            obs1.innerHTML = "<b>R2. Wrong Again :(</b>";
+        if (obs1.innerHTML == "<b>Wrong Answer :(</b>") {
+            obs1.innerHTML = "<b>Wrong Again :(</b>";
         }
         else {
-            obs1.innerHTML = "<b>R2. Wrong Answer :(</b>";
+            obs1.innerHTML = "<b>Wrong Answer :(</b>";
         }
     }
 
@@ -48,28 +43,28 @@ function confirm1() {
 
 function confirm2() {
     const obs1 = document.getElementById("observations1");
-    const inp2 = MQ(mFieldSpan2).latex();
-    const inp3 = MQ(mFieldSpan3).latex();
-    const inp4 = MQ(mFieldSpan4).latex();
-    const inp5 = MQ(mFieldSpan5).latex();
+    const inp2 = mField2.value;
+    const inp3 = mField3.value;
+    const inp4 = mField4.value;
+    const inp5 = mField5.value;
 
     if (inp2.length == "0" || inp3.length == "0" || inp4.length == "0" || inp5.length == "0") {
-        obs1.innerHTML = "<b>R3.</b> Enter the answer."
+        obs1.innerHTML = "Enter the answer."
         obs1.style.color = "black";
     }
 
     else if ((inp2 == "x^2+1" || inp2 == "1+x^2") && inp3 == "1" && (inp4 == "x^2+x" || inp4 == "x+x^2") && (inp5 == "1+x" || inp5 == "x+1")) {
-        obs1.innerHTML = "<b>R3. Correct Answer!!!</b> <br> The GCD is x<sup>2</sup>+1";
+        obs1.innerHTML = "<b>Correct Answer!!!</b> <br> The GCD is x<sup>2</sup>+1";
         obs1.style.color = "green";
     }
 
     else {
         obs1.style.color = "red";
-        if (obs1.innerHTML == "<b>R3. Wrong Answer :(</b>") {
-            obs1.innerHTML = "<b>R3. Wrong Again :(</b>";
+        if (obs1.innerHTML == "<b>Wrong Answer :(</b>") {
+            obs1.innerHTML = "<b>Wrong Again :(</b>";
         }
         else {
-            obs1.innerHTML = "<b>R3. Wrong Answer :(</b>";
+            obs1.innerHTML = "<b>Wrong Answer :(</b>";
         }
     }
 }
@@ -78,51 +73,48 @@ function confirm2() {
 
 
 // Second Example
-var mathFieldSpan1 = document.getElementById("math-field-1");
-var mathField1 = MQ.MathField(mathFieldSpan1, { spaceBehavesLikeTab: true, });
-
-var mathFieldSpan2 = document.getElementById("math-field-2");
-var mathFieldSpan3 = document.getElementById("math-field-3");
-var mathFieldSpan4 = document.getElementById("math-field-4");
-var mathFieldSpan5 = document.getElementById("math-field-5");
-var mathFieldSpan6 = document.getElementById("math-field-6");
-var mathFieldSpan7 = document.getElementById("math-field-7");
-var mathFieldSpan8 = document.getElementById("math-field-8");
-var mathFieldSpan9 = document.getElementById("math-field-9");
+const mathField1 = document.getElementById("math-field-1");
+const mathField2 = document.getElementById("math-field-2");
+const mathField3 = document.getElementById("math-field-3");
+const mathField4 = document.getElementById("math-field-4");
+const mathField5 = document.getElementById("math-field-5");
+const mathField6 = document.getElementById("math-field-6");
+const mathField7 = document.getElementById("math-field-7");
+const mathField8 = document.getElementById("math-field-8");
+const mathField9 = document.getElementById("math-field-9");
 
 
 function check1() {
 
     const obs2 = document.getElementById("observations2");
-    const inp1 = MQ(mathFieldSpan1).latex();
+    const inp1 = mathField1.value;
 
     if (inp1.length == 0) {
-        obs2.innerHTML = "<b>R2.</b> Enter the answer."
+        obs2.innerHTML = "Enter the answer."
         obs2.style.color = "black";
     }
 
     else if (inp1 === "x^3") {
-        obs2.innerHTML = "<b>R2. Correct Answer!!!</b>";
+        obs2.innerHTML = "<b>Correct Answer!!!</b>";
         obs2.style.color = "green";
 
         document.getElementById("sub1").setAttribute("disabled", true);
         document.getElementById("sub2").removeAttribute("disabled");
 
-        MQ.MathField(mathFieldSpan2, { spaceBehavesLikeTab: true, });
-        MQ.MathField(mathFieldSpan3, { spaceBehavesLikeTab: true, });
-        MQ.MathField(mathFieldSpan4, { spaceBehavesLikeTab: true, });
-        MQ.MathField(mathFieldSpan5, { spaceBehavesLikeTab: true, });
-
-
+        mathField1.setAttribute("disabled", true);
+        mathField2.removeAttribute("disabled");
+        mathField3.removeAttribute("disabled");
+        mathField4.removeAttribute("disabled");
+        mathField5.removeAttribute("disabled");
     }
 
     else {
         obs2.style.color = "red";
-        if (obs2.innerHTML == "<b>R2. Wrong Answer :(</b>") {
-            obs2.innerHTML = "<b>R2. Wrong Again :(</b>";
+        if (obs2.innerHTML == "<b>Wrong Answer :(</b>") {
+            obs2.innerHTML = "<b>Wrong Again :(</b>";
         }
         else {
-            obs2.innerHTML = "<b>R2. Wrong Answer :(</b>";
+            obs2.innerHTML = "<b>Wrong Answer :(</b>";
         }
     }
 
@@ -130,63 +122,73 @@ function check1() {
 
 function check2() {
     const obs2 = document.getElementById("observations2");
-    const inp2 = MQ(mathFieldSpan2).latex();
-    const inp3 = MQ(mathFieldSpan3).latex();
-    const inp4 = MQ(mathFieldSpan4).latex();
-    const inp5 = MQ(mathFieldSpan5).latex();
+    const inp2 = mathField2.value;
+    const inp3 = mathField3.value;
+    const inp4 = mathField4.value;
+    const inp5 = mathField5.value;
 
     if (inp2.length == "0" || inp3.length == "0" || inp4.length == "0" || inp5.length == "0") {
-        obs2.innerHTML = "<b>R3.</b> Enter all the fields."
+        obs2.innerHTML = "Enter all the fields."
         obs2.style.color = "black";
     }
     else if ((inp2 == "x^2+1" || inp2 == "1+x^2") && inp3 == "1" && inp4 == "x^3" && inp5 == "x") {
-        obs2.innerHTML = "<b>R3. Correct Answer!!!</b>";
         obs2.style.color = "green";
+        if (obs2.innerHTML == "<b>Correct Answer!!!</b>") {
+            obs2.innerHTML = "<b>Correct Again!!!</b>";
+        }
+        else {
+            obs2.innerHTML = "<b>Correct Answer!!!</b>";
+        }
 
         document.getElementById("sub2").setAttribute("disabled", true);
         document.getElementById("sub3").removeAttribute("disabled");
 
-        MQ.MathField(mathFieldSpan6, { spaceBehavesLikeTab: true, });
-        MQ.MathField(mathFieldSpan7, { spaceBehavesLikeTab: true, });
-        MQ.MathField(mathFieldSpan8, { spaceBehavesLikeTab: true, });
-        MQ.MathField(mathFieldSpan9, { spaceBehavesLikeTab: true, });
+        mathField2.setAttribute("disabled", true);
+        mathField3.setAttribute("disabled", true);
+        mathField4.setAttribute("disabled", true);
+        mathField5.setAttribute("disabled", true);
+
+        mathField6.removeAttribute("disabled");
+        mathField7.removeAttribute("disabled");
+        mathField8.removeAttribute("disabled");
+        mathField9.removeAttribute("disabled");
     }
 
     else {
         obs2.style.color = "red";
-        if (obs2.innerHTML == "<b>R3. Wrong Answer :(</b>") {
-            obs2.innerHTML = "<b>R3. Wrong Again :(</b>";
+        if (obs2.innerHTML == "<b>Wrong Answer :(</b>") {
+            obs2.innerHTML = "<b>Wrong Again :(</b>";
         }
         else {
-            obs2.innerHTML = "<b>R3. Wrong Answer :(</b>";
+            obs2.innerHTML = "<b>Wrong Answer :(</b>";
         }
     }
 }
 
 function check3() {
     const obs2 = document.getElementById("observations2");
-    const inp6 = MQ(mathFieldSpan6).latex();
-    const inp7 = MQ(mathFieldSpan7).latex();
-    const inp8 = MQ(mathFieldSpan8).latex();
-    const inp9 = MQ(mathFieldSpan9).latex();
+    const inp6 = mathField6.value;
+    const inp7 = mathField7.value;
+    const inp8 = mathField8.value;
+    const inp9 = mathField9.value;
 
     if (inp6.length == "0" || inp7.length == "0" || inp8.length == "0" || inp9.length == "0") {
-        obs2.innerHTML = "<b>R4.</b> Enter all the fields."
+        obs2.innerHTML = "Enter all the fields."
         obs2.style.color = "black";
     }
     else if ((inp6 == "x+1" || inp6 == "1+x") && inp7 == "x" && (inp8 == "1+x^4" || inp8 == "x^4+1") && (inp9 == "x+1" || inp9 == "1+x")) {
-        obs2.innerHTML = "<b>R4. Correct Answer!!!</b> <br> The GCD is 1+x<sup>4</sup>";
+        obs2.innerHTML = "<b>Correct Answer!!!</b> <br> The GCD is 1+x";
         obs2.style.color = "green";
 
     }
 
     else {
         obs2.style.color = "red";
-        if (obs2.innerHTML == "<b>R4. Wrong Answer :(</b>") {
-            obs2.innerHTML = "<b>R4. Wrong Again :(</b>";
+        if (obs2.innerHTML == "<b>Wrong Answer :(</b>") {
+            obs2.innerHTML = "<b>Wrong Again :(</b>";
         }
         else {
-            obs2.innerHTML = "<b>R4. Wrong Answer :(</b>";
+            obs2.innerHTML = "<b>Wrong Answer :(</b>";
         }
     }
 }
@@ -202,16 +204,18 @@ function page1() {
 
     obs1.innerHTML = "";
 
-    document.getElementById("m-field-1").innerHTML = "";
-    document.getElementById("m-field-2").innerHTML = "";
-    document.getElementById("m-field-3").innerHTML = "";
-    document.getElementById("m-field-4").innerHTML = "";
-    document.getElementById("m-field-5").innerHTML = "";
+    mField1.removeAttribute("disabled");
+    mField2.setAttribute("disabled", true);
+    mField3.setAttribute("disabled", true);
+    mField4.setAttribute("disabled", true);
+    mField5.setAttribute("disabled", true);
 
-    MQ.MathField(mFieldSpan1, { spaceBehavesLikeTab: true, });
 
     document.getElementById("submit1").removeAttribute("disabled");
     document.getElementById("submit2").setAttribute("disabled", true);
+
+    document.getElementById("form1").reset();
+    document.getElementById("form2").reset();
 }
 
 function page2() {
@@ -225,21 +229,23 @@ function page2() {
 
     obs2.innerHTML = "";
 
-    document.getElementById("math-field-1").innerHTML = "";
-    document.getElementById("math-field-2").innerHTML = "";
-    document.getElementById("math-field-3").innerHTML = "";
-    document.getElementById("math-field-4").innerHTML = "";
-    document.getElementById("math-field-5").innerHTML = "";
-    document.getElementById("math-field-6").innerHTML = "";
-    document.getElementById("math-field-7").innerHTML = "";
-    document.getElementById("math-field-8").innerHTML = "";
-    document.getElementById("math-field-9").innerHTML = "";
+    mathField1.removeAttribute("disabled");
+    mathField2.setAttribute("disabled", true);
+    mathField3.setAttribute("disabled", true);
+    mathField4.setAttribute("disabled", true);
+    mathField5.setAttribute("disabled", true);
+    mathField6.setAttribute("disabled", true);
+    mathField7.setAttribute("disabled", true);
+    mathField8.setAttribute("disabled", true);
+    mathField9.setAttribute("disabled", true);
 
-    MQ.MathField(mathFieldSpan1, { spaceBehavesLikeTab: true, });
-    
     document.getElementById("sub1").removeAttribute("disabled");
     document.getElementById("sub2").setAttribute("disabled", true);
     document.getElementById("sub3").setAttribute("disabled", true);
+
+    document.getElementById("form3").reset();
+    document.getElementById("form4").reset();
+    document.getElementById("form5").reset();
 }
 
 

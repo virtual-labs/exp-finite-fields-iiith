@@ -1,33 +1,11 @@
-var MQ = MathQuill.getInterface(2);
-
-var mathFieldSpan1 = document.getElementById("math-field-1");
-var mathField1 = MQ.MathField(mathFieldSpan1, { spaceBehavesLikeTab: true, });
-
-var mathFieldSpan2 = document.getElementById("math-field-2");
-var mathField2 = MQ.MathField(mathFieldSpan2, { spaceBehavesLikeTab: true, });
-
-var mathFieldSpan3 = document.getElementById("math-field-3");
-var mathField3 = MQ.MathField(mathFieldSpan3, { spaceBehavesLikeTab: true, });
-
-var mathFieldSpan4 = document.getElementById("math-field-4");
-var mathField4 = MQ.MathField(mathFieldSpan4, { spaceBehavesLikeTab: true, });
-
-var mathFieldSpan5 = document.getElementById("math-field-5");
-var mathField5 = MQ.MathField(mathFieldSpan5, { spaceBehavesLikeTab: true, });
-
-var mathFieldSpan6 = document.getElementById("math-field-6");
-var mathField6 = MQ.MathField(mathFieldSpan6, { spaceBehavesLikeTab: true, });
-
-var mathFieldSpan7 = document.getElementById("math-field-7");
-var mathField7 = MQ.MathField(mathFieldSpan7, { spaceBehavesLikeTab: true, });
-
-var mathFieldSpan8 = document.getElementById("math-field-8");
-var mathField8 = MQ.MathField(mathFieldSpan8, { spaceBehavesLikeTab: true, });
+function replaceAlpha(input) {
+    input.value = input.value.replace(/alpha/gi, "α");
+}
 
 function check1() {
 
     const obs1 = document.getElementById("observations1");
-    const inp1 = MQ(mathFieldSpan1).latex();
+    const inp1 = document.getElementById("math-field-1").value;
 
     if (inp1.length == 0) {
         obs1.innerHTML = "<b>Q1.</b> Enter the answer."
@@ -54,7 +32,7 @@ function check1() {
 function check2() {
 
     const obs1 = document.getElementById("observations1");
-    const inp2 = MQ(mathFieldSpan2).latex();
+    const inp2 = document.getElementById("math-field-2").value;
 
     if (inp2.length == 0) {
         obs1.innerHTML = "<b>Q2.</b> Enter the answer."
@@ -80,14 +58,14 @@ function check2() {
 function check3() {
 
     const obs1 = document.getElementById("observations1");
-    const inp3 = MQ(mathFieldSpan3).latex();
+    const inp3 = document.getElementById("math-field-3").value;
 
     if (inp3.length == 0) {
         obs1.innerHTML = "<b>Q3.</b> Enter the answer."
         obs1.style.color = "black";
     }
 
-    else if (inp3 === "\\alpha") {
+    else if (inp3 === "α") {
         obs1.innerHTML = "<b>Q3. Correct Answer!!!</b>";
         obs1.style.color = "green";
     }
@@ -108,14 +86,14 @@ function check3() {
 function check4() {
 
     const obs1 = document.getElementById("observations1");
-    const inp4 = MQ(mathFieldSpan4).latex();
+    const inp4 = document.getElementById("math-field-4").value;
 
     if (inp4.length == 0) {
         obs1.innerHTML = "<b>Q4.</b> Enter the answer."
         obs1.style.color = "black";
     }
 
-    else if (inp4 === "\\alpha^2") {
+    else if (inp4 === "α^2") {
         obs1.innerHTML = "<b>Q4. Correct Answer!!!</b>";
         obs1.style.color = "green";
     }
@@ -134,14 +112,14 @@ function check4() {
 function check5() {
 
     const obs1 = document.getElementById("observations1");
-    const inp5 = MQ(mathFieldSpan5).latex();
+    const inp5 = document.getElementById("math-field-5").value;
 
     if (inp5.length == 0) {
         obs1.innerHTML = "<b>Q5.</b> Enter the answer."
         obs1.style.color = "black";
     }
 
-    else if (inp5 === "1+\\alpha^2" || inp5 === "\\alpha^2+1") {
+    else if (inp5 === "1+α^2" || inp5 === "α^2+1") {
         obs1.innerHTML = "<b>Q5. Correct Answer!!!</b>";
         obs1.style.color = "green";
     }
@@ -160,15 +138,15 @@ function check5() {
 function check6() {
 
     const obs1 = document.getElementById("observations1");
-    const inp6 = MQ(mathFieldSpan6).latex();
+    const inp6 = document.getElementById("math-field-6").value;
 
     if (inp6.length == 0) {
         obs1.innerHTML = "<b>Q6.</b> Enter the answer."
         obs1.style.color = "black";
     }
 
-    else if (inp6 === "1+\\alpha+\\alpha^2" || inp6 === "1+\\alpha^2+\\alpha" || inp6 === "\\alpha+\\alpha^2+1"
-        || inp6 === "\\alpha+1+\\alpha^2" || inp6 === "\\alpha^2+1+\\alpha" || inp6 === "\\alpha^2+\\alpha+1") {
+    else if (inp6 === "1+α+α^2" || inp6 === "1+α^2+α" || inp6 === "α+α^2+1"
+        || inp6 === "α+1+α^2" || inp6 === "α^2+1+α" || inp6 === "α^2+α+1") {
         obs1.innerHTML = "<b>Q6. Correct Answer!!!</b>";
         obs1.style.color = "green";
     }
@@ -188,14 +166,14 @@ function check6() {
 function check7() {
 
     const obs1 = document.getElementById("observations1");
-    const inp7 = MQ(mathFieldSpan7).latex();
+    const inp7 = document.getElementById("math-field-7").value;
 
     if (inp7.length == 0) {
         obs1.innerHTML = "<b>Q7.</b> Enter the answer."
         obs1.style.color = "black";
     }
 
-    else if (inp7 === "1+\\alpha" || inp7 === "\\alpha+1") {
+    else if (inp7 === "1+α" || inp7 === "α+1") {
         obs1.innerHTML = "<b>Q7. Correct Answer!!!</b>";
         obs1.style.color = "green";
     }
@@ -214,14 +192,14 @@ function check7() {
 function check8() {
 
     const obs1 = document.getElementById("observations1");
-    const inp8 = MQ(mathFieldSpan8).latex();
+    const inp8 = document.getElementById("math-field-8").value;
 
     if (inp8.length == 0) {
         obs1.innerHTML = "<b>Q8.</b> Enter the answer."
         obs1.style.color = "black";
     }
 
-    else if (inp8 === "\\alpha+\\alpha^2" || inp8 === "\\alpha^2+\\alpha") {
+    else if (inp8 === "α+α^2" || inp8 === "α^2+α") {
         obs1.innerHTML = "<b>Q8. Correct Answer!!!</b>";
         obs1.style.color = "green";
     }
@@ -249,38 +227,11 @@ function page1() {
 
     obs1.innerHTML = "";
 
-    document.getElementById("math-field-1").innerHTML = "";
-    document.getElementById("math-field-2").innerHTML = "";
-    document.getElementById("math-field-3").innerHTML = "";
-    document.getElementById("math-field-4").innerHTML = "";
-    document.getElementById("math-field-5").innerHTML = "";
-    document.getElementById("math-field-6").innerHTML = "";
-    document.getElementById("math-field-7").innerHTML = "";
-    document.getElementById("math-field-8").innerHTML = "";
+    var forms = document.getElementsByTagName("form");
+    for (var i = 0; i < 8; i++) {
+        forms[i].reset();
+    }
 
-    var mathFieldSpan1 = document.getElementById("math-field-1");
-    MQ.MathField(mathFieldSpan1, { spaceBehavesLikeTab: true, });
-
-    var mathFieldSpan2 = document.getElementById("math-field-2");
-    MQ.MathField(mathFieldSpan2, { spaceBehavesLikeTab: true, });
-
-    var mathFieldSpan3 = document.getElementById("math-field-3");
-    MQ.MathField(mathFieldSpan3, { spaceBehavesLikeTab: true, });
-
-    var mathFieldSpan4 = document.getElementById("math-field-4");
-    MQ.MathField(mathFieldSpan4, { spaceBehavesLikeTab: true, });
-
-    var mathFieldSpan5 = document.getElementById("math-field-5");
-    MQ.MathField(mathFieldSpan5, { spaceBehavesLikeTab: true, });
-
-    var mathFieldSpan6 = document.getElementById("math-field-6");
-    MQ.MathField(mathFieldSpan6, { spaceBehavesLikeTab: true, });
-
-    var mathFieldSpan7 = document.getElementById("math-field-7");
-    MQ.MathField(mathFieldSpan7, { spaceBehavesLikeTab: true, });
-
-    var mathFieldSpan8 = document.getElementById("math-field-8");
-    MQ.MathField(mathFieldSpan8, { spaceBehavesLikeTab: true, });
 }
 
 function page2() {
@@ -295,128 +246,20 @@ function page2() {
 
     obs2.innerHTML = "";
 
-    document.getElementById("m-field-1").innerHTML = "";
-    document.getElementById("m-field-2").innerHTML = "";
-    document.getElementById("m-field-3").innerHTML = "";
-    document.getElementById("m-field-4").innerHTML = "";
-    document.getElementById("m-field-5").innerHTML = "";
-    document.getElementById("m-field-6").innerHTML = "";
-    document.getElementById("m-field-7").innerHTML = "";
-    document.getElementById("m-field-8").innerHTML = "";
-    document.getElementById("m-field-9").innerHTML = "";
-    document.getElementById("m-field-10").innerHTML = "";
-    document.getElementById("m-field-11").innerHTML = "";
-    document.getElementById("m-field-12").innerHTML = "";
-    document.getElementById("m-field-13").innerHTML = "";
-    document.getElementById("m-field-14").innerHTML = "";
-    document.getElementById("m-field-15").innerHTML = "";
-    document.getElementById("m-field-16").innerHTML = "";
-
-    var mFieldSpan1 = document.getElementById("m-field-1");
-    MQ.MathField(mFieldSpan1, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan2 = document.getElementById("m-field-2");
-    MQ.MathField(mFieldSpan2, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan3 = document.getElementById("m-field-3");
-    MQ.MathField(mFieldSpan3, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan4 = document.getElementById("m-field-4");
-    MQ.MathField(mFieldSpan4, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan5 = document.getElementById("m-field-5");
-    MQ.MathField(mFieldSpan5, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan6 = document.getElementById("m-field-6");
-    MQ.MathField(mFieldSpan6, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan7 = document.getElementById("m-field-7");
-    MQ.MathField(mFieldSpan7, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan8 = document.getElementById("m-field-8");
-    MQ.MathField(mFieldSpan8, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan9 = document.getElementById("m-field-9");
-    MQ.MathField(mFieldSpan9, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan10 = document.getElementById("m-field-10");
-    MQ.MathField(mFieldSpan10, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan11 = document.getElementById("m-field-11");
-    MQ.MathField(mFieldSpan11, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan12 = document.getElementById("m-field-12");
-    MQ.MathField(mFieldSpan12, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan13 = document.getElementById("m-field-13");
-    MQ.MathField(mFieldSpan13, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan14 = document.getElementById("m-field-14");
-    MQ.MathField(mFieldSpan14, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan15 = document.getElementById("m-field-15");
-    MQ.MathField(mFieldSpan15, { spaceBehavesLikeTab: true, });
-
-    var mFieldSpan16 = document.getElementById("m-field-16");
-    MQ.MathField(mFieldSpan16, { spaceBehavesLikeTab: true, });
+    var forms = document.getElementsByTagName("form");
+    for (var i = 8; i < forms.length; i++) {
+        forms[i].reset();
+    }
 
 }
 
 
 // Example-2
 
-var mFieldSpan1 = document.getElementById("m-field-1");
-var mField1 = MQ.MathField(mFieldSpan1, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan2 = document.getElementById("m-field-2");
-var mField2 = MQ.MathField(mFieldSpan2, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan3 = document.getElementById("m-field-3");
-var mField3 = MQ.MathField(mFieldSpan3, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan4 = document.getElementById("m-field-4");
-var mField4 = MQ.MathField(mFieldSpan4, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan5 = document.getElementById("m-field-5");
-var mField5 = MQ.MathField(mFieldSpan5, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan6 = document.getElementById("m-field-6");
-var mField6 = MQ.MathField(mFieldSpan6, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan7 = document.getElementById("m-field-7");
-var mField7 = MQ.MathField(mFieldSpan7, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan8 = document.getElementById("m-field-8");
-var mField8 = MQ.MathField(mFieldSpan8, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan9 = document.getElementById("m-field-9");
-var mField9 = MQ.MathField(mFieldSpan9, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan10 = document.getElementById("m-field-10");
-var mField10 = MQ.MathField(mFieldSpan10, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan11 = document.getElementById("m-field-11");
-var mField11 = MQ.MathField(mFieldSpan11, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan12 = document.getElementById("m-field-12");
-var mField12 = MQ.MathField(mFieldSpan12, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan13 = document.getElementById("m-field-13");
-var mField13 = MQ.MathField(mFieldSpan13, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan14 = document.getElementById("m-field-14");
-var mField14 = MQ.MathField(mFieldSpan14, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan15 = document.getElementById("m-field-15");
-var mField15 = MQ.MathField(mFieldSpan15, { spaceBehavesLikeTab: true, });
-
-var mFieldSpan16 = document.getElementById("m-field-16");
-var mField16 = MQ.MathField(mFieldSpan16, { spaceBehavesLikeTab: true, });
-
 function confirm1() {
 
     const obs2 = document.getElementById("observations2");
-    const inp1 = MQ(mFieldSpan1).latex();
+    const inp1 = document.getElementById("m-field-1").value;
 
     if (inp1.length == 0) {
         obs2.innerHTML = "<b>Q1.</b> Enter the answer."
@@ -443,7 +286,7 @@ function confirm1() {
 function confirm2() {
 
     const obs2 = document.getElementById("observations2");
-    const inp2 = MQ(mFieldSpan2).latex();
+    const inp2 = document.getElementById("m-field-2").value;
 
     if (inp2.length == 0) {
         obs2.innerHTML = "<b>Q2.</b> Enter the answer."
@@ -470,14 +313,14 @@ function confirm2() {
 function confirm3() {
 
     const obs2 = document.getElementById("observations2");
-    const inp3 = MQ(mFieldSpan3).latex();
+    const inp3 = document.getElementById("m-field-3").value;
 
     if (inp3.length == 0) {
         obs2.innerHTML = "<b>Q3.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp3 === "\\alpha") {
+    else if (inp3 === "α") {
         obs2.innerHTML = "<b>Q3. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -497,14 +340,14 @@ function confirm3() {
 function confirm4() {
 
     const obs2 = document.getElementById("observations2");
-    const inp4 = MQ(mFieldSpan4).latex();
+    const inp4 = document.getElementById("m-field-4").value;
 
     if (inp4.length == 0) {
         obs2.innerHTML = "<b>Q4.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp4 === "\\alpha^2") {
+    else if (inp4 === "α^2") {
         obs2.innerHTML = "<b>Q4. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -524,14 +367,14 @@ function confirm4() {
 function confirm5() {
 
     const obs2 = document.getElementById("observations2");
-    const inp5 = MQ(mFieldSpan5).latex();
+    const inp5 = document.getElementById("m-field-5").value;
 
     if (inp5.length == 0) {
         obs2.innerHTML = "<b>Q5.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp5 === "\\alpha^3") {
+    else if (inp5 === "α^3") {
         obs2.innerHTML = "<b>Q5. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -551,14 +394,14 @@ function confirm5() {
 function confirm6() {
 
     const obs2 = document.getElementById("observations2");
-    const inp6 = MQ(mFieldSpan6).latex();
+    const inp6 = document.getElementById("m-field-6").value;
 
     if (inp6.length == 0) {
         obs2.innerHTML = "<b>Q6.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp6 === "1+\\alpha" || inp6 === "\\alpha+1") {
+    else if (inp6 === "1+α" || inp6 === "α+1") {
         obs2.innerHTML = "<b>Q6. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -578,14 +421,14 @@ function confirm6() {
 function confirm7() {
 
     const obs2 = document.getElementById("observations2");
-    const inp7 = MQ(mFieldSpan7).latex();
+    const inp7 = document.getElementById("m-field-7").value;
 
     if (inp7.length == 0) {
         obs2.innerHTML = "<b>Q7.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp7 === "\\alpha+\\alpha^2" || inp7 === "\\alpha^2+\\alpha") {
+    else if (inp7 === "α+α^2" || inp7 === "α^2+α") {
         obs2.innerHTML = "<b>Q7. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -605,14 +448,14 @@ function confirm7() {
 function confirm8() {
 
     const obs2 = document.getElementById("observations2");
-    const inp8 = MQ(mFieldSpan8).latex();
+    const inp8 = document.getElementById("m-field-8").value;
 
     if (inp8.length == 0) {
         obs2.innerHTML = "<b>Q8.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp8 === "\\alpha^2+\\alpha^3" || inp8 === "\\alpha^3+\\alpha^2") {
+    else if (inp8 === "α^2+α^3" || inp8 === "α^3+α^2") {
         obs2.innerHTML = "<b>Q8. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -629,18 +472,10 @@ function confirm8() {
 
 }
 
-// For four use this
-// const plus=inp9.replace(/[^+]/g, "").length; //Number of occurences of plus symbol
-// const one=inp9.replace(/[^1]/g, "").length; //Number of occurences of 1
-// const alpha = (inp9.match(/\\alpha/g) || []).length;
-// const alpha2 = (inp9.match(/\\alpha\^2/g) || []).length;
-// const alpha3 = (inp9.match(/\\alpha\^3/g) || []).length;
-
 function confirm9() {
 
     const obs2 = document.getElementById("observations2");
-    const inp9 = MQ(mFieldSpan9).latex();
-
+    const inp9 = document.getElementById("m-field-9").value;
 
 
     if (inp9.length == 0) {
@@ -648,9 +483,9 @@ function confirm9() {
         obs2.style.color = "black";
     }
 
-    else if (inp9 == "1+\\alpha+\\alpha^3" || inp9 == "1+\\alpha^3+\\alpha"
-        || inp9 == "\\alpha+1+\\alpha^3" || inp9 == "\\alpha+\\alpha^3+1"
-        || inp9 == "\\alpha^3+\\alpha+1" || inp9 == "\\alpha^3+1+\\alpha") {
+    else if (inp9 == "1+α+α^3" || inp9 == "1+α^3+α"
+        || inp9 == "α+1+α^3" || inp9 == "α+α^3+1"
+        || inp9 == "α^3+α+1" || inp9 == "α^3+1+α") {
         obs2.innerHTML = "<b>Q9. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -670,14 +505,14 @@ function confirm9() {
 function confirm10() {
 
     const obs2 = document.getElementById("observations2");
-    const inp10 = MQ(mFieldSpan10).latex();
+    const inp10 = document.getElementById("m-field-10").value;
 
     if (inp10.length == 0) {
         obs2.innerHTML = "<b>Q10.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp10 === "\\alpha^2+1" || inp10 === "1+\\alpha^2") {
+    else if (inp10 === "α^2+1" || inp10 === "1+α^2") {
         obs2.innerHTML = "<b>Q10. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -697,14 +532,14 @@ function confirm10() {
 function confirm11() {
 
     const obs2 = document.getElementById("observations2");
-    const inp11 = MQ(mFieldSpan11).latex();
+    const inp11 = document.getElementById("m-field-11").value;
 
     if (inp11.length == 0) {
         obs2.innerHTML = "<b>Q11.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp11 === "\\alpha^3+\\alpha" || inp11 === "\\alpha+\\alpha^3") {
+    else if (inp11 === "α^3+α" || inp11 === "α+α^3") {
         obs2.innerHTML = "<b>Q11. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -724,16 +559,16 @@ function confirm11() {
 function confirm12() {
 
     const obs2 = document.getElementById("observations2");
-    const inp12 = MQ(mFieldSpan12).latex();
+    const inp12 = document.getElementById("m-field-12").value;
 
     if (inp12.length == 0) {
         obs2.innerHTML = "<b>Q12.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp12 == "1+\\alpha+\\alpha^2" || inp12 == "1+\\alpha^2+\\alpha"
-        || inp12 == "\\alpha+1+\\alpha^2" || inp12 == "\\alpha+\\alpha^2+1"
-        || inp12 == "\\alpha^2+\\alpha+1" || inp12 == "\\alpha^2+1+\\alpha") {
+    else if (inp12 == "1+α+α^2" || inp12 == "1+α^2+α"
+        || inp12 == "α+1+α^2" || inp12 == "α+α^2+1"
+        || inp12 == "α^2+α+1" || inp12 == "α^2+1+α") {
         obs2.innerHTML = "<b>Q12. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -753,16 +588,16 @@ function confirm12() {
 function confirm13() {
 
     const obs2 = document.getElementById("observations2");
-    const inp13 = MQ(mFieldSpan13).latex();
+    const inp13 = document.getElementById("m-field-13").value;
 
     if (inp13.length == 0) {
         obs2.innerHTML = "<b>Q13.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp13 == "\\alpha^3+\\alpha+\\alpha^2" || inp13 == "\\alpha^3+\\alpha^2+\\alpha"
-        || inp13 == "\\alpha+\\alpha^3+\\alpha^2" || inp13 == "\\alpha+\\alpha^2+\\alpha^3"
-        || inp13 == "\\alpha^2+\\alpha+\\alpha^3" || inp13 == "\\alpha^2+\\alpha^3+\\alpha") {
+    else if (inp13 == "α^3+α+α^2" || inp13 == "α^3+α^2+α"
+        || inp13 == "α+α^3+α^2" || inp13 == "α+α^2+α^3"
+        || inp13 == "α^2+α+α^3" || inp13 == "α^2+α^3+α") {
         obs2.innerHTML = "<b>Q13. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -782,26 +617,26 @@ function confirm13() {
 function confirm14() {
 
     const obs2 = document.getElementById("observations2");
-    const inp14 = MQ(mFieldSpan14).latex();
+    const inp14 = document.getElementById("m-field-14").value;
 
     if (inp14.length == 0) {
         obs2.innerHTML = "<b>Q14.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp14 == "1+\\alpha+\\alpha^2+\\alpha^3" || inp14 == "1+\\alpha+\\alpha^3+\\alpha^2"
-        || inp14 == "1+\\alpha^2+\\alpha+\\alpha^3" || inp14 == "1+\\alpha^2+\\alpha^3+\\alpha"
-        || inp14 == "1+\\alpha^3+\\alpha+\\alpha^2" || inp14 == "1+\\alpha^3+\\alpha^2+\\alpha" 
-        || inp14 == "\\alpha+1+\\alpha^2+\\alpha^3" || inp14 == "\\alpha+1+\\alpha^3+\\alpha^2"
-        || inp14 == "\\alpha+\\alpha^2+1+\\alpha^3" || inp14 == "\\alpha+\\alpha^2+\\alpha^3+1"
-        || inp14 == "\\alpha+\\alpha^3+1+\\alpha^2" || inp14 == "\\alpha+\\alpha^3+\\alpha^2+1" 
-        || inp14 == "\\alpha^2+1+\\alpha+\\alpha^3" || inp14 == "\\alpha^2+1+\\alpha^3+\\alpha"
-        || inp14 == "\\alpha^2+\\alpha+1+\\alpha^3" || inp14 == "\\alpha^2+\\alpha+\\alpha^3+1"
-        || inp14 == "\\alpha^2+\\alpha^3+1+\\alpha" || inp14 == "\\alpha^2+\\alpha^3+\\alpha+1"
-        || inp14 == "\\alpha^3+1+\\alpha^2+\\alpha" || inp14 == "\\alpha^3+1+\\alpha+\\alpha^2"
-        || inp14 == "\\alpha^3+\\alpha^2+1+\\alpha" || inp14 == "\\alpha^3+\\alpha^2+\\alpha+1"
-        || inp14 == "\\alpha^3+\\alpha+1+\\alpha^2" || inp14 == "\\alpha^3+\\alpha+\\alpha^2+1"  
-        ) {
+    else if (inp14 == "1+α+α^2+α^3" || inp14 == "1+α+α^3+α^2"
+        || inp14 == "1+α^2+α+α^3" || inp14 == "1+α^2+α^3+α"
+        || inp14 == "1+α^3+α+α^2" || inp14 == "1+α^3+α^2+α"
+        || inp14 == "α+1+α^2+α^3" || inp14 == "α+1+α^3+α^2"
+        || inp14 == "α+α^2+1+α^3" || inp14 == "α+α^2+α^3+1"
+        || inp14 == "α+α^3+1+α^2" || inp14 == "α+α^3+α^2+1"
+        || inp14 == "α^2+1+α+α^3" || inp14 == "α^2+1+α^3+α"
+        || inp14 == "α^2+α+1+α^3" || inp14 == "α^2+α+α^3+1"
+        || inp14 == "α^2+α^3+1+α" || inp14 == "α^2+α^3+α+1"
+        || inp14 == "α^3+1+α^2+α" || inp14 == "α^3+1+α+α^2"
+        || inp14 == "α^3+α^2+1+α" || inp14 == "α^3+α^2+α+1"
+        || inp14 == "α^3+α+1+α^2" || inp14 == "α^3+α+α^2+1"
+    ) {
         obs2.innerHTML = "<b>Q14. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -821,16 +656,16 @@ function confirm14() {
 function confirm15() {
 
     const obs2 = document.getElementById("observations2");
-    const inp15 = MQ(mFieldSpan15).latex();
+    const inp15 = document.getElementById("m-field-15").value;
 
     if (inp15.length == 0) {
         obs2.innerHTML = "<b>Q15.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp15 == "\\alpha^3+1+\\alpha^2" || inp15 == "\\alpha^3+\\alpha^2+1"
-        || inp15 == "1+\\alpha^3+\\alpha^2" || inp15 == "1+\\alpha^2+\\alpha^3"
-        || inp15 == "\\alpha^2+1+\\alpha^3" || inp15 == "\\alpha^2+\\alpha^3+1") {
+    else if (inp15 == "α^3+1+α^2" || inp15 == "α^3+α^2+1"
+        || inp15 == "1+α^3+α^2" || inp15 == "1+α^2+α^3"
+        || inp15 == "α^2+1+α^3" || inp15 == "α^2+α^3+1") {
         obs2.innerHTML = "<b>Q15. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
@@ -850,14 +685,14 @@ function confirm15() {
 function confirm16() {
 
     const obs2 = document.getElementById("observations2");
-    const inp16 = MQ(mFieldSpan16).latex();
+    const inp16 = document.getElementById("m-field-16").value;
 
     if (inp16.length == 0) {
         obs2.innerHTML = "<b>Q16.</b> Enter the answer."
         obs2.style.color = "black";
     }
 
-    else if (inp16 === "\\alpha^3+1" || inp16 === "1+\\alpha^3") {
+    else if (inp16 === "α^3+1" || inp16 === "1+α^3") {
         obs2.innerHTML = "<b>Q16. Correct Answer!!!</b>";
         obs2.style.color = "green";
     }
