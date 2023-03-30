@@ -2,38 +2,60 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which of the following is an example of a group",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "(R, -)",
+        "b": "(Z, -)",
+        "c": "(R, +)",
+        "d": "(Q, -)"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is not a characteristic of a finite field?",
+      "answers": {
+        "a": "The number of elements is finite.",
+        "b": "Addition and multiplication are commutative.",
+        "c": "Multiplication has an inverse for every non-zero element.",
+        "d": "Division is well-defined for every pair of elements."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How many irreducible polynomials of degree 2 are there over GF(16)?",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the inverse of the element x = alpha^2 + alpha + 1 in GF(16)?",
+      "answers": {
+        "a": "alpha^5 + alpha^4 + alpha^3 + alpha^2 + 1",
+        "b": "alpha^5 + alpha^4 + alpha^3 + 1",
+        "c": "alpha^5 + alpha^3 + alpha^2 + 1",
+        "d": "alpha^5 + alpha^4 + alpha^2 + 1"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the order of the element alpha in GF(16), where alpha is a root of the irreducible polynomial x^4 + x + 1?",
+      "answers": {
+        "a": "4",
+        "b": "8",
+        "c": "15",
+        "d": "16"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
     }
+   
   ]
 }
