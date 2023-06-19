@@ -7,10 +7,10 @@ The theory associated with Experiment-6 is divided into six parts:
 (2) Ring of polynomials and Extended Euclidean algorithm  <br />
 (3) Construction of finite fields of prime power  <br />
 (4) Structural Properties of Finite Fields  <br />
-     (a) Vector space structure of finite fields  <br/>
-     (b) Multiplicative structure of finite fields <br/>
-     (c) Minimal Polynomials <br/>
-     (d) Sub-fields of a field <br/>
+&nbsp; &nbsp;(a) Vector space structure of finite fields  <br/>
+&nbsp; &nbsp;(b) Multiplicative structure of finite fields <br/>
+&nbsp; &nbsp;(c) Minimal Polynomials <br/>
+&nbsp; &nbsp;(d) Sub-fields of a field <br/>
  
 
 ## 1 &nbsp; &nbsp;Prime Fields
