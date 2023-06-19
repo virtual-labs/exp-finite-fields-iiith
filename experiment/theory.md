@@ -27,6 +27,7 @@ We would like to argue that $(\mathbb{F}_p, +, .)$ is a field.  In Experiment-1,
 The only property which requires to be verified carefully is the existence of multiplicative inverse for every non-zero element in the field. In order to prove that, we need to invoke the fact that $p$ is prime. Consider $a \neq 1 \in \mathbb{F}_p$. $a$ is co-prime with $p$ as $p$ is a prime number. Hence, $gcd(a,p)=1$. Thus, it turns out, there are two integers $x,y$ such that $ax + py = 1$. Doing $\mod p$ operation on the above relation, we have that $a.(x \mod p) = 1 \mod p$. Thus, $x \mod p$ is the required multiplicative inverse of $a$ in the field $\mathbb{F}_p$.
 
 Consider the case of $p=7$. The addition and multiplication tables for $\mathbf{F_7}$ are given below: 
+<br/>
 ![alt text](./images/exp6-fig1.png)
 
 
@@ -40,7 +41,7 @@ $$\begin{equation*}
 
 We also can compute the product of $a(x)$ and $b(x)$ as follows:
 $$\begin{equation*}
-    a(x) b(x) & = & ( 1 + 3x + 4x^2 + x^3 + 6x^5) (2 + 5x^2  + 5x^5 + x^6) 
+    a(x)b(x)  =  ( 1 + 3x + 4x^2 + x^3 + 6x^5)(2 + 5x^2  + 5x^5 + x^6) 
 \end{equation*}$$
 
 **Monic Polynomial:** Consider a polyomial $f(x)$ of degree d, given by $f(x) = \sum_{i=0}^d f_i x^i$. $f(x)$ is said to be monic if $f_d=1$.
@@ -54,8 +55,9 @@ where $0 < \text{deg}(g(x), \text{deg}(h(x) < \text{deg}(f(x) = d$.
 
 Consider a binary field with $p=2$ and $\mathbb{F_2} = \{0,1\}$. The list of all irreducible polynomials over $\mathbb{F_2}$ upto degree 4 are given in the table below:
 It can be shown that for every prime $p$, and every integer $m \geq 1$, irreducible polynomials of degree $m$ exist.
+<br/>
 ![alt text](./images/exp6-fig2.png)
-
+<br/>
 ## 3 &nbsp;&nbsp;Construction of Finite Fields
 Consider the set $\mathbb{F}_p[x]/f(x)$, where $f(x)$ is irreducible of degree $m \geq 2$. $\mathbb{F}_p[x]/f(x)$ is the collection of equivalence classes where we define
 $$\begin{equation*}
