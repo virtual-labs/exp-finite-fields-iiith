@@ -272,7 +272,6 @@ $$
 $$
 
 In this field multiplicative inverse of any $\alpha^{j} (1 \leq j \leq 15)$ is $\alpha^{15-j}$, since $(\alpha^{j}).(\alpha^{15-j}) = \alpha^{15} = 1$. For e.g., multiplicative inverse of $\alpha^3$ is $\alpha^{12}$.
-
 <br>
 ![alt text](./images/exp6-fig9.png)
 <br>
