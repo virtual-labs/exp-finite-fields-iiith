@@ -1,61 +1,83 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "What is the minimal polynomial of the element alpha in GF(5^2), where alpha is a root of the polynomial x^2 + 2x + 1?",
-      "answers": {
-        "a": "x + 1",
-        "b": "x + 2",
-        "c": "x + 3",
-        "d": "x + 4"
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "1. Which of the following can't be a field?",
+        "answers": {
+          "a": "$\\mathbb{F}_{23}$",
+          "b": "$\\mathbb{F}_{16}$",
+          "c": "$\\mathbb{F}_{27}$",
+          "d": "$\\mathbb{F}_{21}$"
+        },
+        "correctAnswer": "d",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "What is the degree of the minimal polynomial of the element alpha in GF(3^4), where alpha is a root of the polynomial x^3 + 2x + 1?",
-      "answers": {
-        "a": "2",
-        "b": "3",
-        "c": "4",
-        "d": "5"
+      {
+        "question": "2. Consider the field $\\mathbb{F}_{9}$. If $gcd(6,4) = 6.x+4.y$ then",
+        "answers": {
+          "a": "$x=2$ and $y=7$.",
+          "b": "$x=1$ and $y=8$.",
+          "c": "$x=3$ and $y=4$.",
+          "d": "$x=2$ and $y=6$."
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Which of the following is a primitive element in GF(2^4)?",
-      "answers": {
-        "a": "alpha^2 + alpha + 1",
-        "b": "alpha^3 + alpha + 1",
-        "c": "alpha^3 + alpha^2 + 1",
-        "d": "alpha^2 + 1"
+      {
+        "question": "3. Consider the field $\\mathbb{F}_{2^4} = \\mathbb{F}_2[x]/(x^4+x^3+1)$. Let $\\alpha$ is the root of $(x^4+x^3+1)$, i.e., $\\alpha^4+\\alpha^{3}+1=0$. Then the polynomial representation of $\\alpha^7$ is",
+        "answers": {
+          "a": "$\alpha^3+\alpha$.",
+          "b": "$\alpha^3+\alpha^2+\alpha+1$.",
+          "c": "$\alpha^4+\alpha^2+1$.",
+          "d": "$\alpha^2+\alpha+1$."
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "How many primitive elements does GF(7^3) have??",
-      "answers": {
-        "a": "0",
-        "b": "1",
-        "c": "2",
-        "d": "3"
+      {
+        "question": "4. Consider the field $\\mathbb{F}_{2^4} = \\mathbb{F}_2[x]/(x^3+x+1)$. Let $\\alpha$ is the root of $(x^4+x^3+1)$, i.e., $\\alpha^{3}+\\alpha+1=0$.  The multiplicative inverse of $\\alpha^7$ is",
+        "answers": {
+          "a": "$\\alpha^9$.",
+          "b": "$\\alpha^8$.",
+          "c": "$\\alpha^7$.",
+          "d": "$\\alpha^4$."
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "What is the degree of the field extension GF(16) over GF(2)??",
-      "answers": {
-        "a": "2",
-        "b": "4",
-        "c": "8",
-        "d": "16"
+      {
+        "question": "5. Let $f(x) = 2x^5+x^4+2x^3+x^2+x$ and $g(x) = x^2+2x+1$ are belong to  $\\mathbb{F}_{3}[x]$. Then $gcd(f(x),g(x))$ is equal to",
+        "answers": {
+          "a": "$2x+1$.",
+          "b": "$x+2$.",
+          "c": "$2x+2$.",
+          "d": "None of the above."
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    }
-   
-  ]
-}
+      {
+        "question": "6. For the above problem find the $s(x)$ and $t(x)$ such that $gcd(f(x),g(x)) = s(x)f(x)+t(x)g(x)$ ?",
+        "answers": {
+          "a": "$s(x) = 2$ and $t(x) = 2x^2+x$",
+          "b": "$s(x) = 1$ and $t(x) = x^3+2$",
+          "c": "$s(x) = 2x^2+1$ and $t(x) = x^3+2x$",
+          "d": "$s(x) = x$ and $t(x) = 2x^3+x^2$"
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "7. Consider the field $\\mathbb{F}_{2^4} = \\mathbb{F}_2[x]/(x^4+x^3+1)$. The minimal polynomial of an element $\\alpha^5$ is",
+        "answers": {
+          "a": "$x^3+x$.",
+          "b": "$x^2+x+1$.",
+          "c": "$x^2+1$.",
+          "d": "None of the above."
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
+      }
+     
+    ]
+  }
