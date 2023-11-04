@@ -1,61 +1,83 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "Which of the following is an example of a group",
-      "answers": {
-        "a": "(R, -)",
-        "b": "(Z, -)",
-        "c": "(R, +)",
-        "d": "(Q, -)"
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "1. Find the multiplicative inverse of 7 in $\\mathbb{F}_{11}$?",
+        "answers": {
+          "a": "4",
+          "b": "6",
+          "c": "8",
+          "d": "9"
+        },
+        "correctAnswer": "c",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Which of the following is not a characteristic of a finite field?",
-      "answers": {
-        "a": "The number of elements is finite.",
-        "b": "Addition and multiplication are commutative.",
-        "c": "Multiplication has an inverse for every non-zero element.",
-        "d": "Division is well-defined for every pair of elements."
+      {
+        "question": "2. Let $a(x) = 3x^5+4x^3+2x^2+1$ and $b(x) = x^3+3x$ are belong to  $\\mathbb{F}_{5}[x]$. Using Division algorithm if it is expressed as $ a(x) = q(x) b(x) + r(x)$ then",
+        "answers": {
+          "a": "$q(x) = x^2+x$ and $r(x) = x^2+1$.",
+          "b": "$q(x) = 3x^2$ and $r(x) = 2x^2+1$.",
+          "c": "$q(x) = 2x^2+x$ and $r(x) = x^2+1$.",
+          "d": "None of the above."
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "How many irreducible polynomials of degree 2 are there over GF(16)?",
-      "answers": {
-        "a": "1",
-        "b": "2",
-        "c": "3",
-        "d": "4"
+      {
+        "question": "3. Let $f(x) = x^4+x^2+1$ belong to $\\mathbb{F}_{2}[x]$. The polynomial $f(x)$ is",
+        "answers": {
+          "a": "irreducible.",
+          "b": "reducible and $f(x) = (x^2+x+1) (x^2+x+1)$.",
+          "c": "reducible and $f(x) = (x^2+1) (x^2+x+1)$.",
+          "d": "None of the above."
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "What is the inverse of the element x = alpha^2 + alpha + 1 in GF(16)?",
-      "answers": {
-        "a": "alpha^5 + alpha^4 + alpha^3 + alpha^2 + 1",
-        "b": "alpha^5 + alpha^4 + alpha^3 + 1",
-        "c": "alpha^5 + alpha^3 + alpha^2 + 1",
-        "d": "alpha^5 + alpha^4 + alpha^2 + 1"
+      {
+        "question": "4. Consider the field $\\mathbb{F}_{2^3} = \\mathbb{F}_2[x]/(x^3+x+1)$. Let $\\alpha$ is the root of $(x^3+x+1)$, i.e., $\\alpha^{3}+\\alpha+1=0$. Then the polynomial representation of $\\alpha^5$ is",
+        "answers": {
+          "a": "$\\alpha^2+\\alpha$.",
+          "b": "$\\alpha^3+\\alpha^2$.",
+          "c": "$\\alpha^2+1$.",
+          "d": "$\alpha^2+\alpha+1$."
+        },
+        "correctAnswer": "d",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "What is the order of the element alpha in GF(16), where alpha is a root of the irreducible polynomial x^4 + x + 1?",
-      "answers": {
-        "a": "4",
-        "b": "8",
-        "c": "15",
-        "d": "16"
+      {
+        "question": "5. Let $f(x) = x^5+x^3+x+1$ and $g(x) = x^2+x$ are belong to  $\\mathbb{F}_{2}[x]$. The $gcd(f(x),g(x))$ is equal to",
+        "answers": {
+          "a": "$x$.",
+          "b": "$x+1$.",
+          "c": "$1$.",
+          "d": "None of the above."
+        },
+        "correctAnswer": "b",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    }
-   
-  ]
-}
+      {
+        "question": "6. For the above problem find the $s(x)$ and $t(x)$ such that $gcd(f(x),g(x)) = s(x)f(x)+t(x)g(x)$ ?",
+        "answers": {
+          "a": "$s(x) = 1$ and $t(x) = x^2+x$",
+          "b": "$s(x) = x$ and $t(x) = x^2+x$",
+          "c": "$s(x) = x^2+1$ and $t(x) = x^3+x$",
+          "d": "$s(x) = 1$ and $t(x) = x^3+x^2$"
+        },
+        "correctAnswer": "d",
+        "difficulty": "beginner"
+      },
+      {
+        "question": "7. Consider the field $\\mathbb{F}_{2^2} = \\mathbb{F}_2[x]/(x^2+x+1)  = \\{ 0, 1, \\alpha, \\alpha^{2} = \\alpha+1 \\}$. The minimal polynomial of an element $\\alpha$ is",
+        "answers": {
+          "a": "$x+\\alpha$.",
+          "b": "$x^2+1$.",
+          "c": "$1$.",
+          "d": "$x^2+x+1$."
+        },
+        "correctAnswer": "d",
+        "difficulty": "beginner"
+      }
+     
+    ]
+  }
