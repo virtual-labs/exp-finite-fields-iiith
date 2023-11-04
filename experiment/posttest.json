@@ -26,10 +26,10 @@
       {
         "question": "3. Consider the field $\\mathbb{F}_{2^4} = \\mathbb{F}_2[x]/(x^4+x^3+1)$. Let $\\alpha$ is the root of $(x^4+x^3+1)$, i.e., $\\alpha^4+\\alpha^{3}+1=0$. Then the polynomial representation of $\\alpha^7$ is",
         "answers": {
-          "a": "$\alpha^3+\alpha$.",
-          "b": "$\alpha^3+\alpha^2+\alpha+1$.",
-          "c": "$\alpha^4+\alpha^2+1$.",
-          "d": "$\alpha^2+\alpha+1$."
+          "a": "$\\alpha^3+\\alpha$.",
+          "b": "$\\alpha^3+\\alpha^2+\\alpha+1$.",
+          "c": "$\\alpha^4+\\alpha^2+1$.",
+          "d": "$\\alpha^2+\\alpha+1$."
         },
         "correctAnswer": "b",
         "difficulty": "beginner"
