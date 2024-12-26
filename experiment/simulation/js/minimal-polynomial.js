@@ -112,6 +112,7 @@ function click2(id) {
 
         else {
             obs1.innerHTML = "<b>Wrong Answer :(</b> <br> Try again.";
+            alert('Wrong Answer :(');
             obs1.style.color = "red";
 
             setTimeout(rightreset1, 1000);
@@ -404,6 +405,7 @@ function click4(id) {
 
         else {
             obs2.innerHTML = "<b>Wrong Answer :(</b> <br> Try again.";
+            alert('Wrong Answer :(');
             obs2.style.color = "red";
 
             setTimeout(rightreset2, 1000);

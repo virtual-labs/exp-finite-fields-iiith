@@ -33,9 +33,11 @@ function confirm1() {
         obs1.style.color = "red";
         if (obs1.innerHTML == "<b>Wrong Answer :(</b>") {
             obs1.innerHTML = "<b>Wrong Again :(</b>";
+            alert('Wrong Again :(');
         }
         else {
             obs1.innerHTML = "<b>Wrong Answer :(</b>";
+            alert('Wrong Answer :(');
         }
     }
 }
@@ -62,9 +64,11 @@ function confirm2() {
         obs1.style.color = "red";
         if (obs1.innerHTML == "<b>Wrong Answer :(</b>") {
             obs1.innerHTML = "<b>Wrong Again :(</b>";
+            alert('Wrong Again :(');
         }
         else {
             obs1.innerHTML = "<b>Wrong Answer :(</b>";
+            alert('Wrong Answer :(');
         }
     }
 
@@ -119,9 +123,11 @@ function check1() {
         obs2.style.color = "red";
         if (obs2.innerHTML == "<b>Wrong Answer :(</b>") {
             obs2.innerHTML = "<b>Wrong Again :(</b>";
+            alert('Wrong Again :(');
         }
         else {
             obs2.innerHTML = "<b>Wrong Answer :(</b>";
+            alert('Wrong Answer :(');
         }
     }
 }
@@ -161,9 +167,11 @@ function check2() {
         obs2.style.color = "red";
         if (obs2.innerHTML == "<b>Wrong Answer :(</b>") {
             obs2.innerHTML = "<b>Wrong Again :(</b>";
+            alert('Wrong Again :(');
         }
         else {
             obs2.innerHTML = "<b>Wrong Answer :(</b>";
+            alert('Wrong Answer :(');
         }
     }
 }
@@ -189,9 +197,11 @@ function check3() {
         obs2.style.color = "red";
         if (obs2.innerHTML == "<b>Wrong Answer :(</b>") {
             obs2.innerHTML = "<b>Wrong Again :(</b>";
+            alert('Wrong Again :(');
         }
         else {
             obs2.innerHTML = "<b>Wrong Answer :(</b>";
+            alert('Wrong Answer :(');
         }
     }
 
