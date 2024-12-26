@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+	<link rel="stylesheet" href="./css/euclidean-division.css">
+	<link rel="stylesheet" href="./css/main.css">
+
+	<title>
+		Euclidean Division Algorithm
+	</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-one-quarter v-instruction-title">
+				Tasks
+			</div>
+			<div class="column">
+				<div class="v-tabs">
+					<ul>
+						<li class="is-active" id="Task1">
+							<a>
+								Euclidean Division Algorithm
+							</a>
+						</li>
+
+						<li id="Task2" onclick="window.location.href = 'finite-field.html';">
+							<a>
+								Elements of Finite Field
+							</a>
+						</li>
+
+						<li id="Task3" onclick="window.location.href = 'minimal-polynomial.html';">
+							<a>
+								Minimal Polynomials
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="columns is-centered">
+			<div class="column">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						<ul style="list-style: disc;">
+							<b>Quick theory overview:</b>
+
+							<li>
+								The last non-zero remainder in the euclidean division algorithm gives the GCD.
+							</li>
+							<li>
+								The GCD h(x) can be expressed as the linear combination of f(x) and g(x) i.e.
+								h(x)=r(x)f(x)+s(x)g(x) where f(x) is the dividend and g(x) is the divisor.
+							</li>
+						</ul>
+
+						<br>
+
+						<ul style="list-style: disc;">
+							<b>Procedure:</b>
+							<li>
+								Using landscape mode is recommended on mobile phones and other smaller screens.
+							</li>
+							<li>
+								Polynomials can be entered in the fields provided. Use only lower case x in the field.
+							</li>
+							<li>
+								Expressions like x<sup>2</sup> can be entered in the field by typing x^2 on the
+								keyboard.
+							</li>
+							<li>
+								1, x, +, x^2, x^3 and their combinations need to be entered in the fields in this task.
+								Do not enter any other symbols.
+							</li>
+							<li>
+								Enter the values in all the fields of a row and click on <b>Submit</b>.
+							</li>
+							<li>
+								The correctness of the entered answer is displayed in <b>Observations</b>.
+							</li>
+							<li>
+								If the answer is correct, proceed to the next row. Values in the fields
+								of a row cannot be entered without completing the previous row correctly.
+							</li>
+							<li>
+								Repeat this process until all the rows are filled and the algorithm is complete when a
+								success message displaying the GCD appears in <b>Observations</b>.
+							</li>
+							<li>
+								<b>Next</b> - Displays the next example.
+							</li>
+							<li>
+								<b>Previous</b> - Displays the previous example.
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+
+
+	<section id="example1">
+		<div class="columns is-centered">
+			<div class="column is-11-desktop is-12-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<br>
+					<p>Compute the GCD of <b>x<sup>5</sup>+x<sup>2</sup>+x+1</b> and
+						<b>x<sup>3</sup>+x<sup>2</sup>+x+1</b> over GF(2)
+						using the
+						extended Euclidean Division Algorithm.
+					</p>
+					<br>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
+			style="margin-top:-1.5%">
+			<div class="column is-8-desktop is-12-tablet is-12-mobile">
+				<div class="box-question">
+
+					<div class="scroll-box-1">
+						<p>
+						<table>
+
+							<tr>
+								<th>Remainder</th>
+								<th>r(x)</th>
+								<th>s(x)</th>
+								<th>Quotient</th>
+							</tr>
+
+							<tr height="45px">
+								<td> <b>x<sup>5</sup>+x<sup>2</sup>+x+1</b> </td>
+								<td> <b>1</b> </td>
+								<td> <b>0</b> </td>
+								<td> </td>
+							</tr>
+
+							<tr height="65px">
+								<td><br> <b>x<sup>3</sup>+x<sup>2</sup>+x+1</b> </td>
+								<td><br> <b>0</b> </td>
+								<td><br> <b>1</b> </td>
+								<td> </td>
+
+
+							</tr>
+
+							<tr height="65px">
+								<form action="" method="get" id="form1" autocomplete="off" onsubmit="return false">
+									<td> <input id="m-field-1" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> </td>
+									<td> <input id="m-field-2" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> </td>
+									<td> <input id="m-field-3" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> </td>
+									<td>
+										<input id="m-field-4" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> &emsp;
+										<button class="v-button" role="button" id="submit1" form="form1"
+											onClick="confirm1()"> Submit
+										</button>
+									</td>
+								</form>
+							</tr>
+
+							<tr height="40px">
+								<td> <b>0</b> </td>
+								<td> </td>
+								<td> </td>
+								<form action="" method="get" id="form2" autocomplete="off" onsubmit="return false">
+
+									<td>
+										<input id="m-field-5" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled>
+										&emsp;<button class="v-button" role="button" id="submit2" form="form2"
+											onClick="confirm2()" disabled>
+											Submit </button>
+									</td>
+								</form>
+
+							</tr>
+
+						</table>
+						</p>
+					</div>
+					<button class="v-button" role="button" onClick="page2()"> Next </button>
+				</div>
+			</div>
+
+
+			<div class="column is-3-desktop is-4-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<div class="v-datalist-title">Observations</div>
+					<div id="observations1">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="example2" style="display: none;">
+		<div class="columns is-centered">
+			<div class="column is-11-desktop is-12-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<br>
+					<p>Compute the GCD of <b>x<sup>6</sup>+x<sup>3</sup>+x<sup>2</sup>+1</b> and <b>x<sup>3</sup>+1</b>
+						over GF(2)
+						using the
+						extended Euclidean Division Algorithm.</p>
+					<br>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
+			style="margin-top:-1.5%">
+			<div class="column is-8-desktop is-12-tablet is-12-mobile">
+				<div class="box-question">
+
+					<div class="scroll-box-1">
+						<table>
+
+							<tr>
+								<th>Remainder</th>
+								<th>r(x)</th>
+								<th>s(x)</th>
+								<th>Quotient</th>
+
+							</tr>
+
+							<tr height="45px">
+								<td> <b>x<sup>6</sup>+x<sup>3</sup>+x<sup>2</sup>+1</b> </td>
+								<td> <b>1</b> </td>
+								<td> <b>0</b> </td>
+								<td> </td>
+							</tr>
+
+							<tr height="65px">
+								<td><br> <b>x<sup>3</sup>+1</b> </td>
+								<td><br> <b>0</b> </td>
+								<td><br> <b>1</b> </td>
+								<td> </td>
+							</tr>
+
+							<tr height="65px">
+								<form action="" method="get" id="form3" autocomplete="off" onsubmit="return false">
+									<td> <input id="math-field-1" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> </td>
+									<td> <input id="math-field-2" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> </td>
+									<td> <input id="math-field-3" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> </td>
+									<td> <input id="math-field-4" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')"> &emsp;
+										<button class="v-button" role="button" id="sub1" form="form3"
+											onClick="check1()"> Submit
+										</button>
+									</td>
+								</form>
+							</tr>
+
+							<tr height="65px">
+								<form action="" method="get" id="form4" autocomplete="off" onsubmit="return false">
+									<td> <input id="math-field-5" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="math-field-6" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="math-field-7" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> </td>
+									<td> <input id="math-field-8" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> &emsp;
+										<button class="v-button" role="button" id="sub2" form="form4" onClick="check2()"
+											disabled> Submit
+										</button>
+									</td>
+								</form>
+							</tr>
+
+							<tr height="40px">
+								<td> <b>0</b> </td>
+								<td> </td>
+								<td> </td>
+								<form action="" method="get" id="form5" autocomplete="off" onsubmit="return false">
+									<td> <input id="math-field-9" class="text-inp"
+											oninput="this.value = this.value.replace(/\s+/g, '')" disabled> &emsp;
+										<button class="v-button" role="button" id="sub3" form="form5"
+											onClick="check3()" disabled>
+											Submit </button>
+									</td>
+								</form>
+							</tr>
+						</table>
+
+					</div>
+					<br>
+					<button class="v-button" role="button" onClick="page1()"> Previous </button>
+				</div>
+			</div>
+
+			<div class="column is-3-desktop is-4-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<div class="v-datalist-title">Observations</div>
+					<div id="observations2">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+	<script src="./js/euclidean-division.js"></script>
+<script src="..\assets\js\iframeResize.js"></script></body>
+
+
+</html>
