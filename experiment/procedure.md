@@ -1,10 +1,9 @@
-### Procedure
-
 There are three tasks in this experiment.
 <br>
 <br>
 
 **Procedure for Euclidean Division Algorithm:**
+
 1. Using landscape mode is recommended on mobile phones and other smaller screens.
 2. Polynomials can be entered in the fields provided. Use only lower case x in the field.
 3. Expressions like x<sup>2</sup> can be entered in the field by typing x^2 on the keyboard.
@@ -17,7 +16,9 @@ There are three tasks in this experiment.
 10. <b>Previous</b> - Displays the previous example.
 
 ---
+
 **Procedure for Elements of Finite Field:**
+
 1. Typing alpha on the keyboard displays the symbol &alpha;.
 2. Expressions like &alpha;<sup>2</sup> can be entered in the field by typing alpha^2 on the keyboard.
 3. Enter the values in the fields and click on <b>Submit</b>.
@@ -25,9 +26,11 @@ There are three tasks in this experiment.
 5. The correctness of the entered answer is displayed in <b>Observations</b>.
 6. <b>Next</b> - Displays the next example.
 7. <b>Previous</b> - Displays the previous example.
+
 ---
 
 **Procedure for Minimal Polynomial:**
+
 1. Using landscape mode is recommended on mobile phones and other smaller screens.
 2. First select element(s) of the finite field from the left column by clicking on it. The background color changes to red indicating that the element has been selected.
 3. Then select the corresponding minimal polynomial from the right column by clicking on it.
@@ -36,5 +39,5 @@ There are three tasks in this experiment.
 6. Repeat this procedure until all the elements are matched with the corresponding minimal polynomials.
 7. <b>Next</b> - Displays the next example.
 8. <b>Previous</b> - Displays the previous example.
----
 
+---
