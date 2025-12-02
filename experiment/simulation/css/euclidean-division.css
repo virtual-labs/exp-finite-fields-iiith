@@ -24,14 +24,15 @@ tr:nth-child(even) {
     height: 270px;
 }
 
-.input{
-    /* margin-top: -0.3%; */
+.text-inp {
     height: 2.5em;
-    width: 6em;
+    width: 5em;
     border: solid black;
     border-radius: 0.5em;
     background-color: #fff;
     font-size: 1.25em;
+    color: blue;
+    text-align: center;
 }
 
 #observations1,

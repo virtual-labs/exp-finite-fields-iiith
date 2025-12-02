@@ -2,37 +2,122 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. Find the multiplicative inverse of 7 in $\\mathbb{F}_{11}$?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "4",
+        "b": "6",
+        "c": "8",
+        "d": "9"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. $7 \\times 4 = 28 \\equiv 6 \\pmod{11}$.",
+        "b": "Incorrect. $7 \\times 6 = 42 \\equiv 9 \\pmod{11}$.",
+        "c": "Correct! $7 \\times 8 = 56 \\equiv 1 \\pmod{11}$, so 8 is the inverse.",
+        "d": "Incorrect. $7 \\times 9 = 63 \\equiv 8 \\pmod{11}$."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. Let $a(x) = 3x^5+4x^3+2x^2+1$ and $b(x) = x^3+3x$ are belong to  $\\mathbb{F}_{5}[x]$. Using Division algorithm if it is expressed as $ a(x) = q(x) b(x) + r(x)$ then",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "$q(x) = x^2+x$ and $r(x) = x^2+1$.",
+        "b": "$q(x) = 3x^2$ and $r(x) = 2x^2+1$.",
+        "c": "$q(x) = 2x^2+x$ and $r(x) = x^2+1$.",
+        "d": "None of the above."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Check the division carefully.",
+        "b": "Correct! This is the correct quotient and remainder.",
+        "c": "Incorrect. The coefficients do not match.",
+        "d": "Incorrect. Option (b) is correct."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Let $f(x) = x^4+x^2+1$ belong to $\\mathbb{F}_{2}[x]$. The polynomial $f(x)$ is",
+      "answers": {
+        "a": "irreducible.",
+        "b": "reducible and $f(x) = (x^2+x+1) (x^2+x+1)$.",
+        "c": "reducible and $f(x) = (x^2+1) (x^2+x+1)$.",
+        "d": "None of the above."
+      },
+      "explanations": {
+        "a": "Incorrect. $f(x)$ can be factored.",
+        "b": "Correct! $f(x) = (x^2+x+1)^2$ over $\\mathbb{F}_2$.",
+        "c": "Incorrect. This is not a valid factorization.",
+        "d": "Incorrect. Option (b) is correct."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Consider the field $\\mathbb{F}_{2^3} = \\mathbb{F}_2[x]/(x^3+x+1)$. Let $\\alpha$ is the root of $(x^3+x+1)$, i.e., $\\alpha^{3}+\\alpha+1=0$. Then the polynomial representation of $\\alpha^5$ is",
+      "answers": {
+        "a": "$\\alpha^2+\\alpha$.",
+        "b": "$\\alpha^3+\\alpha^2$.",
+        "c": "$\\alpha^2+1$.",
+        "d": "$\\alpha^2+\\alpha+1$."
+      },
+      "explanations": {
+        "a": "Incorrect. $\\alpha^5$ does not equal $\\alpha^2+\\alpha$.",
+        "b": "Incorrect. $\\alpha^3+\\alpha^2$ is not the correct representation.",
+        "c": "Incorrect. $\\alpha^2+1$ is not the correct representation.",
+        "d": "Correct! $\\alpha^5 = \\alpha^2+\\alpha+1$ in $\\mathbb{F}_{2^3}$."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Let $f(x) = x^5+x^3+x+1$ and $g(x) = x^2+x$ are belong to  $\\mathbb{F}_{2}[x]$. The $gcd(f(x),g(x))$ is equal to",
+      "answers": {
+        "a": "$x$.",
+        "b": "$x+1$.",
+        "c": "$1$.",
+        "d": "None of the above."
+      },
+      "explanations": {
+        "a": "Incorrect. $x$ is not a common divisor.",
+        "b": "Correct! $x+1$ is the greatest common divisor.",
+        "c": "Incorrect. 1 is not the greatest common divisor.",
+        "d": "Incorrect. Option (b) is correct."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. For the above problem find the $s(x)$ and $t(x)$ such that $gcd(f(x),g(x)) = s(x)f(x)+t(x)g(x)$ ?",
+      "answers": {
+        "a": "$s(x) = 1$ and $t(x) = x^2+x$",
+        "b": "$s(x) = x$ and $t(x) = x^2+x$",
+        "c": "$s(x) = x^2+1$ and $t(x) = x^3+x$",
+        "d": "$s(x) = 1$ and $t(x) = x^3+x^2$"
+      },
+      "explanations": {
+        "a": "Incorrect. This does not satisfy the equation.",
+        "b": "Incorrect. This does not satisfy the equation.",
+        "c": "Incorrect. This does not satisfy the equation.",
+        "d": "Correct! These polynomials satisfy the equation for the gcd."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Consider the field $\\mathbb{F}_{2^2} = \\mathbb{F}_2[x]/(x^2+x+1)  = \\{ 0, 1, \\alpha, \\alpha^{2} = \\alpha+1 \\}$. The minimal polynomial of an element $\\alpha$ is",
+      "answers": {
+        "a": "$x+\\alpha$.",
+        "b": "$x^2+1$.",
+        "c": "$1$.",
+        "d": "$x^2+x+1$."
+      },
+      "explanations": {
+        "a": "Incorrect. This is not the minimal polynomial.",
+        "b": "Incorrect. This is not the minimal polynomial.",
+        "c": "Incorrect. This is not the minimal polynomial.",
+        "d": "Correct! $x^2+x+1$ is the minimal polynomial of $\\alpha$."
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]
